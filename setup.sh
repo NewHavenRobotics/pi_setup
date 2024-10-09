@@ -11,5 +11,6 @@ touch /etc/network/interfaces.d/eth0
 printf "allow-hotplug eth0\niface eth0 inet static\naddress %s\nnetwork 192.168.1.0\nnetmask 255.255.255.0\ngateway 192.168.1.1" "$ip" >> /etc/network/interfaces.d/eth0
 
 #simplify prompt
-printf"#Ryan's Simple Prompt\nPS1=\"\\e[1;32m\u\e[0m:\e[1;36m\w \e[0m\"" >> /$name/.bashrc
+echo "#Ryan's Simple Prompt" >> /home/$name/.bashrc
+echo "PS1=\"\e[1;32m\u\e[0m:\e[1;36m\w\e[0m \"" >> /home/$name/.bashrc
 exit
